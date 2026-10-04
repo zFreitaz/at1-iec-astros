@@ -6,7 +6,7 @@ export class AstroController {
     try {
       const astros = await Astro.findAll();
       return res.status(200).json(astros);
-    } catch (error) {
+    } catch {
       return res.status(500).json({ erro: 'Erro ao listar astros' });
     }
   }
@@ -21,17 +21,20 @@ export class AstroController {
       }
 
       return res.status(200).json(astro);
-    } catch (error) {
+    } catch {
       return res.status(500).json({ erro: 'Erro ao buscar astro' });
     }
   }
 
   public static async create(req: Request, res: Response): Promise<Response> {
     try {
-      const { nome, tipo, descricao, massa, distancia_al, habitavel } = req.body;
+      const { nome, tipo, descricao, massa, distancia_al, habitavel } =
+        req.body;
 
       if (!nome || !tipo || massa === undefined) {
-        return res.status(400).json({ erro: 'Campos obrigatórios não preenchidos' });
+        return res
+          .status(400)
+          .json({ erro: 'Campos obrigatórios não preenchidos' });
       }
 
       const astro = await Astro.create({
@@ -61,7 +64,7 @@ export class AstroController {
 
       await astro.update(req.body);
       return res.status(200).json(astro);
-    } catch (erro) {
+    } catch {
       return res.status(500).json({ erro: 'Erro ao atualizar astro' });
     }
   }
@@ -77,7 +80,7 @@ export class AstroController {
 
       await astro.destroy();
       return res.status(200).json({ mensagem: 'Astros excluido com sucesso' });
-    } catch (erro) {
+    } catch {
       return res.status(500).json({ erro: 'Erro ao excluir Astro' });
     }
   }

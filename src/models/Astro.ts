@@ -51,5 +51,5 @@ Astro.init(
     sequelize,
     tableName: 'astros',
     timestamps: true,
-  }
+  },
 );

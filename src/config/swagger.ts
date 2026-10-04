@@ -7,7 +7,8 @@ const options: swaggerJSDoc.Options = {
     info: {
       title: 'API de Astros - Catálogo Astronômico',
       version: '1.0.0',
-      description: 'API RESTful para cadastro e gerenciamento de corpos celestes desenvolvida com Node.js, Express, TypeScript e Sequelize.',
+      description:
+        'API RESTful para cadastro e gerenciamento de corpos celestes desenvolvida com Node.js, Express, TypeScript e Sequelize.',
     },
     servers: [
       {
@@ -34,7 +35,8 @@ const options: swaggerJSDoc.Options = {
             },
             descricao: {
               type: 'string',
-              example: 'Quarto planeta a partir do Sol, conhecido como Planeta Vermelho.',
+              example:
+                'Quarto planeta a partir do Sol, conhecido como Planeta Vermelho.',
             },
             massa: {
               type: 'number',
@@ -72,7 +74,8 @@ const options: swaggerJSDoc.Options = {
             },
             descricao: {
               type: 'string',
-              example: 'Quarto planeta a partir do Sol, conhecido como Planeta Vermelho.',
+              example:
+                'Quarto planeta a partir do Sol, conhecido como Planeta Vermelho.',
             },
             massa: {
               type: 'number',
