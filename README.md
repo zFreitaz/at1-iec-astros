@@ -1,21 +1,21 @@
-# 🌌 API RESTful de Catálogo de Astros
+# Backend Astros - Atividade IEC
 
-API RESTful desenvolvida para a atividade avaliativa da disciplina de **Laboratório de Desenvolvimento Web (LDW)**. O sistema gerencia um catálogo de corpos celestes com persistência relacional no PostgreSQL e documentação interativa via Swagger UI.
+Projeto backend em Node.js e TypeScript com foco em automação, qualidade de código, containerização e Integração Contínua (CI).
+
+## 🚀 Tecnologias
+
+- **Node.js 20 & TypeScript**
+- **Docker & Docker Compose**
+- **PostgreSQL 15**
+- **ESLint & Prettier** (padronização de código)
+- **Husky** (Git Hook de pre-commit)
+- **GitHub Actions** (pipeline de CI)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Como Executar com Docker
 
-- **Node.js** com **TypeScript**
-- **Express.js**
-- **Sequelize ORM**
-- **PostgreSQL** (Supabase)
-- **Swagger UI** (`swagger-ui-express` + `swagger-jsdoc`)
+Para subir a API e o banco de dados PostgreSQL simultaneamente:
 
----
-
-## 🚀 Como Executar o Projeto
-
-### 1. Instalar as dependências
 ```bash
-npm install
+docker compose up -d --build
