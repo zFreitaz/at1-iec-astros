@@ -9,7 +9,7 @@ import astroRoutes from './routes/astroRoutes';
 
 dotenv.config();
 
-// validacao ci 2
+// validar ci 5
 
 const app = express();
 const PORT = process.env.PORT || 3000;
