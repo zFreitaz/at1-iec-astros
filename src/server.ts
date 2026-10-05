@@ -9,17 +9,19 @@ import astroRoutes from './routes/astroRoutes';
 
 dotenv.config();
 
+// validicao esteira ci
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
 
-// Documentação Swagger
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-// Rotas da API
+
 app.use('/api/astros', astroRoutes);
 
 async function startServer() {
